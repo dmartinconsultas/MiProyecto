@@ -5,12 +5,22 @@ color: #171717;
 margin: 0;
 }
 header {
-	background-color: #171717; 
+	background-color: #171717;
+	overflow: auto;
+	padding: 20px; 
 }
 header h1 {
 	margin: 0;
 	color: #d9d9d9;
+	float: left;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	padding-left: 75px;
 }
+
+
+
+
 a {
 	text-decoration: none;
 	color: #d5d5d5;
@@ -19,6 +29,10 @@ nav ul {margin: 0;
 		padding: 0;
 		list-style: none;
 }
+
+nav { float: right;
+ }
+
 nav ul li {
 		display: inline-block; 
 }
