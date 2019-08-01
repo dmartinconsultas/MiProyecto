@@ -1,5 +1,5 @@
 body {
-font-family: "arial";
+font-family: "Arial";
 font-size: 14px;
 color: #171717;
 margin: 0;
@@ -7,7 +7,8 @@ margin: 0;
 header {
 	background-color: #171717;
 	overflow: auto;
-	padding: 20px; 
+	padding: 20px;
+
 }
 header h1 {
 	margin: 0;
@@ -16,10 +17,9 @@ header h1 {
 	background-image: url(../img/logo.png);
 	background-repeat: no-repeat;
 	padding-left: 75px;
+	padding-top: 2px;
+	padding-bottom: 3px;
 }
-
-
-
 
 a {
 	text-decoration: none;
@@ -28,10 +28,12 @@ a {
 nav ul {margin: 0;
 		padding: 0;
 		list-style: none;
+		padding-top: 5px;
+		padding-bottom: 1px;
 }
 
 nav { float: right;
- }
+}
 
 nav ul li {
 		display: inline-block; 
@@ -45,4 +47,21 @@ nav ul li a:hover {
 		background-color: #d9d9d9;
 		color: #171717;
 }
-
+img {
+	display: block;
+	width: 100%;
+}
+#noticias-destacadas figcaption{
+	background-color: #171717;
+	padding: 20px;
+}
+#noticias-destacadas h2{
+	color: #d9d9d9;
+	font-size: 42px;
+	font-weight: 700;
+}
+#noticias-destacadas h3{
+	color: #d9d9d9;
+	font-size: 42px;
+	font-weight: 700;
+}
