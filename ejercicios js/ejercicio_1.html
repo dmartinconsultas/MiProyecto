@@ -32,7 +32,6 @@
 				<li>Stock</li>
 				<li>Precio</li>
 				<li>Disponibilidad</li>
-				<li>Cantidad</li> 
 			</ul>
 			<p>Mostrar un mensaje en el <code>&lt;article&gt;</code> que indique el cuanto valen y cuantas unidades hay de ese producto.</p>
 			<article>
@@ -41,101 +40,7 @@
 		</aside>
 
 		<script>
-			/* Lección 1:
-			- Tipos Primitivos
-			- Datos de Origen Determinado (hardcodeado)
-			- Datos de Origen Indeterminado 
-			
-			var Nombre = "Cafe" 	// string
-			var Stock = 500			// int (integer)
-			var Precio = 85.60		// float 
-			var Disponible = false	// bool
-
-
-			var precioFinal = Precio*1.21 // ...Dato de origen indeterminado , determinable luego de una operacion logica o matematica 
-
-			console.log(Nombre)
-			console.log(Stock)
-			console.log(Precio)
-			console.log(Disponible)
-			*/
-
-			/* 
-				Leccion 2:
-				- Datos de Origen indeterminado...determinado por el usuario
-				- Combinacion de datos " estaticos" y "dinamicos"
-			*/
-
-			//1) INTRODUCCION
-			//var nombre = prompt("Ingrese Nombre:")
-			var Nombre = null
-			var Stock = prompt("Ingrese Stock:")
-			var Precio = prompt("Ingrese Precio:")
-			var Disponible = confirm("Esta disponible para la venta?")
-			var Cantidad = prompt("Ingrese Cantidad a comprar:")
-			var Color = prompt("Ingrese Color:")
-			var Envio = confirm("Lo retira o requiere envío?")
-
-			//2) NUDO
-			
-			while ( ( Nombre = prompt("ingrese nombre:")) == "") {
-
-				alert("ERROR: El nombre no puede quedar vacío")	
-			}
-
-			Stock = parseInt(Stock) //<- Reciclado de variable
-
-			
-			if ( Stock == ""|| Stock <= 0 || Stock > 100 || isNaN(Stock) ){
-				alert("ERROR: Ingrese el stock unicamente en numeros positivos")
-			}
-
-			while ( Precio == "" || Precio < "0" || isNaN( parsFloat(Precio) ) ){
-				alert("ERROR: Ingrese el Precio en numeros positivos (opcional: ctv)")
-
-				Precio = prompt("Reingrese el Precio por favor:")
-			}
-
-			var descuentoVolumen = Precio * 0.95 * 1.21
-
-			if ( Cantidad <= "10") {
-
-				alert("ERROR: Ingresar mas de 10 para obtener descuento por volumen")	
-			}
-
-			var descuentoColorRojo = Precio * 0.90 * 1.21
-
-			if ( Color = "Rojo" ) {
-
-				alert("FELICITACIONES!! Obtuvo un 10 porciento de descuento!")	
-
-			}
-
-			if ( disponible == undefined ){
-				alert("Error: debe especificar la disponibilidad")
-
-			}
-
-			var precioFinal = Precio * 1.21
-
-			//var mensaje = "Hay "+ Nombre +" unidades de "+ Stock +" que valen "+ precio
-
-			var mensaje = `<p>Hay ${Stock} unidades de <strong>${Nombre}</strong> que cuestan ${precioFinal} cada una. Pero si ud. compra ${Cantidad} el precio final por unidad le quedará en ${descuentoVolumen}. Al margen, como eligió color Rojo tiene un 10 % de descuento y su precio por unidad le queda en ${descuentoColorRojo}<p>`
-
-				/* 
-				Leccion 3:
-				- Visualizacion de los datos
-				- Integracion Js + HTML
-				*/
-
-			//3) DESENLACE
-			document.querySelector("article").innerHTML = mensaje
-
-
-
-			console.log( mensaje )
-
-
+		
 		</script>
 	</body>
 </html>
