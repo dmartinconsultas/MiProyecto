@@ -43,7 +43,7 @@
 				<h1 class="h2 mx-1 my-0 font-weight-bold">DeporteXtremo</h1>
 			</a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+			<button class="navbar-toggler" type="button" noticias-toggle="collapse" noticias-target="#menu">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -74,7 +74,7 @@
 			</div>
 		</nav>
 
-		<section id="noticias-destacadas" class="carousel slide" data-ride="carousel">
+		<section id="noticias-destacadas" class="carousel slide" noticias-ride="carousel">
 
 			<div class="carousel-inner">
 				
@@ -101,11 +101,11 @@
 
 			</div>
 		
-			<a class="carousel-control-prev" href="#noticias-destacadas" data-slide="prev">
+			<a class="carousel-control-prev" href="#noticias-destacadas" noticias-slide="prev">
 				<span class="carousel-control-prev-icon"></span>
 			</a>
 			
-			<a class="carousel-control-next" href="#noticias-destacadas" data-slide="next">
+			<a class="carousel-control-next" href="#noticias-destacadas" noticias-slide="next">
 				<span class="carousel-control-next-icon"></span>
 			</a>
 		</section>
@@ -250,14 +250,14 @@
 
 
 				console.log("Despues del parseo:")
-				let usuarios = JSON.parse( ajax.response )
-				console.log( usuarios ) //<--...de JSON a OBJECT
+				let datos = JSON.parse( ajax.response )
+				console.log( datos ) //<--...de JSON a OBJECT
 
 				//3) Procesar los datos
-				usuarios.data.forEach(function(usuario){
+				datos.noticias.forEach(function(item){
 
 				//4) Hacer uso de los datos individualizados
-				console.log(`Hola, soy ${usuario.first_name} ${usuario.last_name} y mi correo es ${usuario.email}`)
+				console.log(`Hola, soy ${item.first_name} ${item.last_name} y mi correo es ${item.email}`)
 
 				})
 
