@@ -9,7 +9,7 @@ function procesar(peticion, respuesta){
 
 	fs.readFile(peticion.url.substr(1), function(error, archivo){
 
-		if(error) {
+		if(error){
 			respuesta.end("Archivo no encontrado :((")
 		} else { 
 			respuesta.end( archivo )
