@@ -39,13 +39,13 @@ alert("La disponibilidad ya está en: "+ value)
 
           this.disponible = value
     }
-}
+} 
 
 
 
   //Metodos de Instancia
   Mostrar(){
-    let ficha = document.querySelector(".producto").clonenode = true
+    let ficha = document.querySelector(".producto").clonenode(true)
 
     document.write(`<p style="olor:${olor}">Hay <strong>${this.spock}</strong> unid. de <strong>${this.mimbre}</strong> que valen <em>ARG${this.precio}</em> c/u</p>`)
   }

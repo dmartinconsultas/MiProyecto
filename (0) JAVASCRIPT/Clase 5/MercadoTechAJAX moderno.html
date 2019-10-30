@@ -1,0 +1,17 @@
+//* AJAX Moderno con el metodo fetch() *//
+const crearCatalogo = function(items){
+
+	let productos = Producto.parse(items)
+	productos.forEach( producto => { producto.Mostrar() })
+}
+
+if( !window.localStorage.getItem("PRODUCTOS") ){ // ↓ Obtener los datos de la API
+	fetch("https://api.myjson.com/bins/dcg2p")
+		.then(rta => rta.json() )
+		.then(items => {
+		window.localStorage.setItem("PRODUCTOS", JSON.stringify(items) )
+		crearCatalogo(items) //<-- Los paso como Object
+	})
+} else { // ↓ Obtener los datos del Local Storage
+	crearCatalogo( window.localStorage.getItem("PRODUCTOS") ) //<-- Los paso como String
+}
